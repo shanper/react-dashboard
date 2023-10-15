@@ -24,13 +24,13 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
-      rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"> -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <!-- npm i bootstrap-icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
     <title>React App</title>
   </head>
   
@@ -43,39 +43,270 @@
     <div class="top">
       <div class="logo">
         <img src="logo192.png" alt=""/>
-        <h2>MY<span class="text-danger">APP</span></h2>
+        <h2>MY<span class="text-danger  text-muted">APP</span></h2>
       </div>
       <div class="close" id="close-btn">
-        <span class="material-icons-sharp">close</span>
+        <i class="bi bi-x-lg"></i>
       </div>
     </div>
     <div class="sidebar">
-      <a href="#" id="">        
-        <span class="material-icons-sharp">grid_view</span>
+      <a href="#" id="">          
+        <span>
+          <i class="bi bi-grid-3x3"></i>  
+        </span>
         <h3>Dashboard</h3>
       </a>
-      <a href="#" id="">        
-        <span class="material-icons-sharp">customers</span>
+      <a href="#" id="" class="active">        
+        <span>
+          <i class="bi bi-person"></i>
+        </span>
         <h3>Customers</h3>
       </a>
-      <a href="#" id="">        
-        <span class="material-icons-sharp"></span>
+      <a href="#" id="">             
+        <span>
+          <i class="bi bi-receipt-cutoff"></i>
+        </span>
         <h3>Orders</h3>
       </a>
       <a href="#" id="">        
-        <span class="material-icons-sharp">grid_view</span>
+        <span>
+          <i class="bi bi-envelope"></i>  
+        </span>
         <h3>Messages</h3>
-        <span class="message-count">26</span>
+        <span class="badge bg-danger message-count">26</span>
       </a>
       <a href="#" id="">        
-        <span class="material-icons-sharp">grid_view</span>
+        <span>
+          <i class="bi bi-graph-up"></i>
+        </span>
         <h3>Analytics</h3>
+      </a>
+      <a href="#" id="">           
+        <span>
+          <i class="bi bi-file-earmark-spreadsheet"></i> 
+        </span>
+        <h3>Reports</h3>
+      </a>
+      <a href="#" id="">              
+        <span>
+          <i class="bi bi-gear"></i>
+        </span>
+        <h3>Settings</h3>
+      </a>
+      <a href="#" id="">        
+        <span>
+          <i class="bi bi-box-arrow-right"></i> 
+        </span>
+        <h3>Logout</h3>
       </a>
     </div>
   </aside>
+  <!-- ============ main content ============== -->
+  <main>
+    <h1>Dashboard</h1>
+    <div class="date">
+      <input type="date">
+    </div>
+
+    <div class="insights">
+      <div class="sales">
+        <span>
+          <i class="bi bi-clipboard2-data-fill"></i>
+        </span>
+        <div class="middle">
+          <div class="left">
+            <h3>Total Sales</h3>
+            <h1>$25,025</h1>
+          </div>
+          <div class="progress">
+            <svg>
+              <circle cx="38" cy="38" r="38"></circle>
+            </svg>
+            <div class="number">
+              <p>81%</p>
+            </div>  
+          </div>
+        </div>
+        <small class="text-muted">Last 24 Hours</small>
+      </div>
+      <!-- ------------- end of sales -------- -->
+      <div class="expenses">
+        <span><i class="bi bi-bar-chart-line-fill"></i></span>
+        <div class="middle">
+          <div class="left">
+            <h3>Total Expenses</h3>
+            <h1>$10,161</h1>
+          </div>
+          <div class="progress">
+            <svg>
+              <circle cx="38" cy="38" r="38"></circle>
+            </svg>
+            <div class="number">
+              <p>62%</p>
+            </div>  
+          </div>
+        </div>
+        <small class="text-muted">Last 24 Hours</small>
+      </div>
+      <!-- ------------- end of expenses -------- -->
+      <div class="income">
+        <span><i class="bi bi-coin"></i></span>
+        <div class="middle">
+          <div class="left">
+            <h3>Total Income</h3>
+            <h1>$10,864</h1>
+          </div>
+          <div class="progress">
+            <svg>
+              <circle cx="38" cy="38" r="38"></circle>
+            </svg>
+            <div class="number">
+              <p>44%</p>
+            </div>  
+          </div>
+        </div>
+        <small class="text-muted">Last 24 Hours</small>
+      </div>
+      <!-- ------------- end of income -------- -->
+
+    </div>
+    <!-- ---------------end of insights -------------- -->
+    <div class="recent-orders">
+      <h2>Recent Orders</h2>
+      <table class="card">
+        <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Product Number</th> 
+          <th>Payment</th>
+          <th>Status</th>
+          <th></th>  
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Foldable Mini Drone</td>
+            <td>85631</td>
+            <td>Due</td>
+            <td class="warning">Pending</td>
+          </tr>
+          <tr>
+            <td>Foldable Mini Drone</td>
+            <td>85631</td>
+            <td>Due</td>
+            <td class="warning">Pending</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="#">Show All</a>
+    </div>
+  </main>
+
+  <!-- ---------------end of main ------------- -->
+  <div class="right">
+    <div class="top">
+      <button id="menu-btn">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="theme-toggler">
+        <i class="bi bi-brightness-high-fill active"></i>
+        <i class="bi bi-moon-fill"></i>
+      </div>
+      <div class="profile">
+        <div class="info">
+          <p>Hey,<b>Daniel</b></p>
+          <small class="text-muted">Admin</small>
+        </div>
+        <div class="profile-photo">
+          <img src="./images/profile-1.jpeg" alt="Profile Picture">
+        </div>
+      </div>
+
+    </div>
+   <!-- ----- end of top ----- -->
+   <div class="recent-updates">
+    <h2>Recent Updates</h2>
+    <div class="updates card">
+      <div class="update">
+        <div class="profile-photo">
+          <img src="./images/profile-2.jpeg" alt="">
+        </div>
+        <div class="message">
+          <p><b>Mike Tyson</b> Received his order of Night lion tech GPS drone.</p>
+          <small class="text-muted">2 Minutes Ago</small>
+        </div>
+      </div>
+      <div class="update">
+        <div class="profile-photo">
+          <img src="./images/profile-3.jpeg" alt="">
+        </div>
+        <div class="message">
+          <p><b>Ashly Heather</b> Received her order of CG100 tech GPS drone.</p>
+          <small class="text-muted">1 hour Ago</small>
+        </div>
+      </div>
+      <div class="update">
+        <div class="profile-photo">
+          <img src="./images/profile-4.jpeg" alt="">
+        </div>
+        <div class="message">
+          <p><b>Natasha Powell</b> Received her order of DTE100 tech GPS drone.</p>
+          <small class="text-muted">2 hours Ago</small>
+        </div>
+      </div>
+    </div>
+   </div>
+   <!-- ------- end of recent updates ----- -->
+    <div class="sales-analytics">
+      <h2>Sales Analytics</h2>
+      <div class="item online">
+        <div class="icon">
+          <i class="bi bi-cart-fill"></i>
+        </div>
+        <div class="right">
+          <div class="info">
+            <h3>ONLINE ORDERS</h3>
+            <small class="text-muted">Last 24 Hours</small>
+          </div>
+          <h5 class="success">+39%</h5>
+          <h3>3849</h3>
+        </div>
+      </div>
+      <div class="item offline">
+        <div class="icon">
+          <i class="bi bi-shop"></i>
+        </div>
+        <div class="right">
+          <div class="info">
+            <h3>OFFLINE ORDERS</h3>
+            <small class="text-muted">Last 24 Hours</small>
+          </div>
+          <h5 class="danger">-17%</h5>
+          <h3>1100</h3>
+        </div>
+      </div>
+      <div class="item customers">
+        <div class="icon">
+          <i class="bi bi-person-fill"></i>
+        </div>
+        <div class="right">
+          <div class="info">
+            <h3>NEW CUSTOMERS</h3>
+            <small class="text-muted">Last 24 Hours</small>
+          </div>
+          <h5 class="danger">+25%</h5>
+          <h3>849</h3>
+        </div>
+      </div>
+      <div class="item add-product">
+        <div>
+          <i class="bi bi-plus-lg"></i>
+          <h3>Add Products</h3>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-
  <!-- ---- dashboard end ---- --> 
   </body>
 </html>
