@@ -153,7 +153,6 @@ aside{
 }
 
 aside .top{
-    background-color: yellow;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -394,7 +393,8 @@ main table tbody td{
     height:2.8rem;
     border-bottom: 1px solid var(--color-light);
     color:var(--color-dark-variant);
-
+    text-align: center;
+    vertical-align: middle;
 }
 
 main table tbody tr:last-child td{
@@ -552,6 +552,109 @@ main .recent-orders a{
     font-weight: 600;
 }
  
+
+/* ============= Media Queries ================= */
+
+@media screen and (max-width:1200px) {
+    .container{
+        width:94%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+
+    aside .logo h2{
+        display:none;
+    }
+
+    aside .sidebar h3{
+        display:none;
+    }
+
+    aside .sidebar a{
+        width:5.6rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+    
+    main .insights{
+        grid-template-columns: 1fr;
+        gap:0;
+    }
+
+    main .recent-orders{
+        width:94%;
+        position:absolute;
+        left:50%;
+        transform: translatex(-50%);
+        margin: 2rem 0 0 8.8rem;
+    }
+
+    main .recent-orders table{
+        width:83vw;
+    }
+
+    main table thead tr th:first-child,
+    main table thead tr th:last-child{
+        display:none;
+    }
+
+    main table tbody tr td:first-child,
+    main table tbody tr td:last-child{
+        display:none;
+    }
+}
+
+/* ============== mobile and small tablets ============= */
+@media screen and (max-width:768px) {
+    .container{
+        width: 100%;
+    }
+
+    aside{
+        position: fixed;
+        background: var(--color-white);
+        width: 18rem;
+        z-index:3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        padding-right:var(--card-padding);
+    }
+
+    aside .logo{
+        margin-left: 1rem;
+    }
+
+    aside .logo h2{
+        display: inline;
+    }
+
+    aside .sidebar h3{
+        display: inline;
+    }
+
+    aside .sidebar a {
+        width: 100%;
+        height: 3.4rem;        
+    }
+
+    aside .sidebar a:last-child{
+        position: absolute;
+        bottom:5rem;
+    }
+    
+
+
+}
+
+
+
+
+
+
+
+
 
 
 
